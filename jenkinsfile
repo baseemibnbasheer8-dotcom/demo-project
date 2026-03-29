@@ -1,7 +1,21 @@
 pipeline {
     agent any
 
+    tools {
+        maven 'Maven'
+    }
+
+    environment {
+        SONAR_HOME = tool 'SonarQube'
+    }
+
     stages {
+
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/baseemibnbasheer8-dotcom/demo-project.git'
+            }
+        }
 
         stage('Build') {
             steps {
