@@ -47,7 +47,6 @@ pipeline {
         always {
             emailext(
                 to: 'baseemibnbasheer8@gmail.com',
-                from:'baseemibnbasheer8@gmail.com',
                 subject: "Build ${currentBuild.currentResult}: ${env.JOB_NAME}",
                 body: "Build ${currentBuild.currentResult}. Check console: ${env.BUILD_URL}"
             )
