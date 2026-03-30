@@ -34,5 +34,14 @@ pipeline {
                 }
             }
         }
+            post {
+                always {
+                emailext(
+                    to: 'your-email@gmail.com',
+                    subject: "Build ${currentBuild.currentResult}: ${env.JOB_NAME}",
+                    body: "Build ${currentBuild.currentResult}. Check console: ${env.BUILD_URL}"
+                )
+            }
+        }
     }
 }
