@@ -39,13 +39,6 @@ pipeline {
                 }
             }
         }
-        stage('Check Network') {
-            steps {
-                sh 'hostname'
-                sh 'ping -c 2 smtp.gmail.com'
-                sh 'nc -zv smtp.gmail.com 587'
-            }
-        }
     }
 
     post {
