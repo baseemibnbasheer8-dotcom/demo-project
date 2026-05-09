@@ -1,3 +1,2 @@
 # demo-project
-#this edit for auto trigger 
-#second edit for auto triger
+THIS REPO IS USED FOR HELM 
