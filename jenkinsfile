@@ -94,7 +94,7 @@ pipeline {
 
                     git branch: 'main',
                     credentialsId: 'github-cred',
-                    url: 'https://github.com/baseemibnbasheer8-dotcom/demo-project.git'
+                    url: 'https://github.com/baseemibnbasheer8-dotcom/k8s-resources/tree/master/demo-project-chart'
 
                     sh """
                     sed -i 's|tag:.*|tag: "${BUILD_NUMBER}"|' values.yaml
