@@ -105,9 +105,9 @@ pipeline {
                     git config user.name "jenkins"
 
                     git add .
-                    git commit -m "Updated image tag $BUILD_NUMBER"
+                    git commit -m "Updated image tag $BUILD_NUMBER" || true
 
-                    git push
+                    git push -u origin main
                     '''
                 }
             }
