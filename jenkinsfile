@@ -97,7 +97,7 @@ pipeline {
                     url: 'https://github.com/baseemibnbasheer8-dotcom/k8s-resources.git'
 
                     sh """
-                    sed -i 's|tag:.*|tag: "${BUILD_NUMBER}"|' ./manifest-repo/values.yaml
+                    sed -i 's|tag:.*|tag: "${BUILD_NUMBER}"|' ./values.yaml
                     """
 
                     sh '''
