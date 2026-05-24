@@ -92,7 +92,7 @@ pipeline {
 
                 dir('manifest-repo') {
 
-                    git branch: 'main',
+                    git branch: 'master',
                     credentialsId: 'github-cred',
                     url: 'https://github.com/baseemibnbasheer8-dotcom/k8s-resources.git'
 
