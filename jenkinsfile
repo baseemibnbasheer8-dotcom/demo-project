@@ -11,7 +11,7 @@ pipeline {
 
     stages {
 
-        // ---------------- SOURCE CODE ----------------
+        
 
         stage('Checkout') {
             steps {
@@ -20,7 +20,7 @@ pipeline {
             }
         }
 
-        // ---------------- BUILD ----------------
+        
 
         stage('Build') {
             steps {
@@ -28,7 +28,7 @@ pipeline {
             }
         }
 
-        // ---------------- SONAR ----------------
+        
 
         stage('SonarQube Analysis') {
             steps {
@@ -38,7 +38,7 @@ pipeline {
             }
         }
 
-        // ---------------- QUALITY GATE ----------------
+        
 
         stage('Quality Gate') {
             steps {
@@ -48,7 +48,7 @@ pipeline {
             }
         }
 
-        // ---------------- DOCKER ----------------
+        
 
         stage('Docker Login') {
             steps {
@@ -87,7 +87,7 @@ pipeline {
             }
         }
 
-        // ---------------- UPDATE GITOPS REPO ----------------
+        
 
         stage('Update Manifest Repo') {
             steps {
